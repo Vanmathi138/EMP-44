@@ -132,8 +132,6 @@
             return true;
         }
 
-
-
         class EmployeePayroll {
 
             constructor() {
@@ -223,6 +221,12 @@
             document.getElementById("month").addEventListener("change", validateStartDate);
             document.getElementById("year").addEventListener("change", validateStartDate);
 
+        });
+        
+        document.getElementById("resetBtn").addEventListener("click", function () {
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("dateError").innerText = "";
+        document.getElementById("salary-output").textContent = document.getElementById("salary").value;
         });
 
         document.getElementById("payrollForm").addEventListener("submit", function(e) {
